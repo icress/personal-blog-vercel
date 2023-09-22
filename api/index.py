@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, abort, flash
 from flask_bootstrap import Bootstrap
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
-from forms import RegisterForm, CreatePostForm, LoginForm, CommentForm
+from .forms import RegisterForm, CreatePostForm, LoginForm, CommentForm
 from flask_ckeditor import CKEditor
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
