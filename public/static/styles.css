@@ -1,0 +1,164 @@
+body {
+background-color: #EEF5F9;
+}
+
+.bg-light {
+color: #EEF5F9;
+}
+
+.title-container {
+background-image: linear-gradient(rgba(0,0,0,0.5),
+rgba(0,0,0,0.5)),
+url('https://images.unsplash.com/photo-1437419764061-2473afe69fc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80');
+
+background-repeat: no-repeat;
+background-size: cover;
+height: 100vh;
+text-align: center;
+}
+
+@media (max-width: 900px) and (orientation: portrait) {
+.title-container {
+height: 50vh;
+}
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+.title-container {
+height: 120vh;
+}
+}
+
+.category-container {
+background-size: cover;
+height: 50vh;
+}
+
+@media (max-width: 700px) {
+.category-container {
+height: 30vh;
+}
+}
+
+.navbar {
+position: relative;
+color: #E3F1FB;
+}
+
+.bottom-container {
+text-align: center;
+background-color: #95A6B0;
+padding: 3% 0 0 1%
+}
+
+.navbar-brand {
+font-weight: bold;
+}
+
+.title {
+text-align: center;
+position: relative;
+color: white;
+padding: 10%;
+}
+
+.title h1 {
+font-size: 3.5rem;
+}
+
+@media (max-width: 450px) {
+.title h1 {
+font-size: 2.5rem;
+}
+}
+
+.main-subtitle {
+margin: 5%;
+}
+
+.subtitle {
+margin: 12% 0 5%;
+}
+
+.page-title {
+text-align: center;
+}
+
+.post-list {
+margin: 10% 0% 20%;
+padding: 0 20%;
+}
+
+.post-item {
+margin-bottom: 5%;
+}
+
+.post-list-title {
+color: black;
+}
+
+.post-list-title:hover {
+color: gray;
+}
+
+.post-content {
+margin: 0 10% 10%;
+}
+
+.post-title {
+margin-top: 5%;
+text-align: center;
+font-size: 3.5rem;
+}
+
+.post-pic {
+width: 100%;
+height: auto;
+padding: 0;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+border-radius: 1rem;
+margin: 8% 0
+}
+
+.form-container {
+height: 80vh;
+max-width: 500px;
+padding: 5%;
+}
+
+.form-control {
+margin: 10px 0;
+}
+
+#submit {
+margin: 10px 0;
+}
+
+.footer-link {
+font-size: 1.5rem;
+text-decoration: none;
+color: black;
+}
+
+.footer-link:hover {
+color: white;
+}
+
+.btn-contact {
+margin: 10px;
+}
+
+#copyright {
+margin-top: 20px;
+}
+
+.error-message {
+color: red;
+font-size: 1.3rem;
+}
+
+.disclaimer {
+color: red;
+text-align: center;
+margin-top: 3%;
+}

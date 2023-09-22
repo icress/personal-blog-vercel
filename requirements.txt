@@ -1,0 +1,11 @@
+flask
+flask_bootstrap
+flask_login
+WTForms
+flask_ckeditor
+flask_wtf
+flask_sqlalchemy
+sqlalchemy
+werkzeug
+gunicorn==20.1.0
+psycopg2-binary==2.9.5
