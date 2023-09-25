@@ -96,7 +96,7 @@ def load_user(user_id):
 # Home page
 @app.route('/', methods=["GET", "POST"])
 def home():
-    # try:
+    try:
 
         posts = BlogPost.query.all()
         return render_template('index.html',
@@ -104,9 +104,10 @@ def home():
                                user=current_user,
                                logged_in=current_user.is_authenticated,
                                posts=posts)
-    # except Exception as e:
-    #     print('Error returning the home page')
-    #     print(f'Here is the error: {e}')
+    except Exception as e:
+        print('Error returning the home page')
+        print(f'Here is the error: {e}')
+        return 'Error loading home page'
 
 
 # Register page
