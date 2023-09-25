@@ -1,7 +1,7 @@
 from flask import Flask, render_template, redirect, url_for, abort, flash
 from flask_bootstrap import Bootstrap
 from flask_login import UserMixin, login_user, LoginManager, current_user, logout_user, login_required
-from .forms import RegisterForm, CreatePostForm, LoginForm, CommentForm
+from forms import RegisterForm, CreatePostForm, LoginForm, CommentForm
 from flask_ckeditor import CKEditor
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import relationship
@@ -11,7 +11,7 @@ import os
 from functools import wraps
 
 # Configure Flask
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../public/templates', static_folder='../public/static')
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 # Adds CKEditor to app
@@ -96,7 +96,7 @@ def load_user(user_id):
 # Home page
 @app.route('/', methods=["GET", "POST"])
 def home():
-    try:
+    # try:
 
         posts = BlogPost.query.all()
         return render_template('index.html',
@@ -104,9 +104,9 @@ def home():
                                user=current_user,
                                logged_in=current_user.is_authenticated,
                                posts=posts)
-    except Exception as e:
-        print('Error returning the home page')
-        print(f'Here is the error: {e}')
+    # except Exception as e:
+    #     print('Error returning the home page')
+    #     print(f'Here is the error: {e}')
 
 
 # Register page
