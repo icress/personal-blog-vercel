@@ -21,9 +21,9 @@ ckeditor = CKEditor(app)
 Bootstrap(app)
 
 # Links app with SQL database
+db = SQLAlchemy(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-db = SQLAlchemy(app)
 
 # Allows people to be logged in
 login_manager = LoginManager()
